@@ -1,9 +1,13 @@
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("./src/css");
+  eleventyConfig.addPassthroughCopy({"./public/": "/"});
+
 	return {
 		// Set directroty paths
 		dir: {
 			input: "src",
 			includes: "../_includes",
+			layouts: "../_includes/layouts",
 			data: "../_data",
 		},
 
