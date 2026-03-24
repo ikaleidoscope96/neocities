@@ -1,6 +1,6 @@
 ---
-title: index
-layouts: base.njk
+title: ikaleidoscope96
+layout: base.njk
 ---
 
 # Ya Boi's Website!

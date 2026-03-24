@@ -1,6 +1,6 @@
 ---
 title: Not Found
-layouts: base.njk
+layout: base.njk
 ---
 
 # Page Not Found
