@@ -6,7 +6,7 @@ layout: base.njk
 # Ya Boi's Website!
 
 "From freedom came elegence."
-![neocities cat](img/neocities-cat.png)
+![neocities cat](images/neocities-cat.png)
 
 ## Interests
 
@@ -18,3 +18,8 @@ layout: base.njk
 ### Speaking Of Websites
 
 **[The very first website!!!](https://info.cern.ch)**
+
+### Links
+
+- [test](./test)
+- [latex](./latex)
