@@ -1,7 +1,10 @@
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite"
+
 export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("./src/css");
 	eleventyConfig.addPassthroughCopy("./src/js");
 	eleventyConfig.addPassthroughCopy({"./public/": "/"});
+	eleventyConfig.addPlugin(EleventyVitePlugin);
 
 	return {
 		// Set directroty paths

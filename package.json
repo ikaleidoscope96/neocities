@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ikaleidoscope96/neocities#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy-plugin-vite": "^7.0.0",
     "three": "^0.183.2"
   },
   "devDependencies": {
