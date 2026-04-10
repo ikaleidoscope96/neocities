@@ -19,7 +19,8 @@ layout: base.njk
 
 **[The very first website!!!](https://info.cern.ch)**
 
-### Links
+### Explore The Site
 
-- [test](./test)
-- [latex](./latex)
+- [test](./test/)
+- [threejs](./three/)
+- [latex](./latex/)
