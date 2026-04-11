@@ -22,5 +22,5 @@ layout: base.njk
 ### Explore The Site
 
 - [test](./test/)
-- [threejs](./three/)
+- [threejs](./threejs/)
 - [latex](./latex/)
