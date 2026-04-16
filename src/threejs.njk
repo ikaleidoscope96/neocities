@@ -1,12 +1,24 @@
 ---
-title: My first three.js app
+title: Threejs
 layout: base.njk
 ---
 
 {% block css %}
 <style>
 	body { margin: 0; }
+	#info {
+		position: absolute;
+		top: 10px;
+		width: 100%;
+		text-align: center;
+		z-index: 100;
+		display: block;
+		color: white;
+	}
 </style>
 {% endblock %}
 
-<script type="module" src="../js/three.js"></script>
+<div id="info">The humble green cube.</div>
+<script type="module" src="../js/cube.js"></script>
+{# <div id="info">A simple cyan line.</div> #}
+{# <script type="module" src="../js/line.js"></script> #}
