@@ -2,9 +2,9 @@ import EleventyVitePlugin from "@11ty/eleventy-plugin-vite"
 import path from "node:path";
 
 export default async function(eleventyConfig) {
-	eleventyConfig.addPassthroughCopy("./src/css");
-	eleventyConfig.addPassthroughCopy("./src/js");
-	eleventyConfig.addPassthroughCopy({"./public/": "/"});
+	eleventyConfig.addPassthroughCopy("src/css");
+	eleventyConfig.addPassthroughCopy("src/js");
+	eleventyConfig.addPassthroughCopy({"public": "/"});
 
 	eleventyConfig.addPlugin(EleventyVitePlugin, {
 		tempFolderName: ".11ty-vite", // Default name of the temp folder
@@ -37,21 +37,21 @@ export default async function(eleventyConfig) {
 			},
 		},
 	});
+};
 
-	return {
-		// Set directroty paths
-		dir: {
-			input: "src",
-			includes: "../_includes",
-			layouts: "../_includes/layouts",
-			data: "../_data",
-		},
+export const config = {
+	// Set directroty paths
+	dir: {
+		input: "src",
+		includes: "../_includes",
+		layouts: "../_includes/layouts",
+		data: "../_data",
+	},
 
-		// Set njk as default template language for hmtl and md
-		htmlTemplateEngine: "njk",
-		markdownTemplateEngine: "njk",
+	// Set njk as default template language for hmtl and md
+	htmlTemplateEngine: "njk",
+	markdownTemplateEngine: "njk",
 
-		// Specify template formats to transform
-		templateFormats: [ "html", "md", "njk", ],
-	};
-}
+	// Specify template formats to transform
+	templateFormats: [ "html", "md", "njk", ],
+};
