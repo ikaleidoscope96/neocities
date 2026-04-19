@@ -7,7 +7,10 @@
 		{% if mathjax %}
 			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 		{% endif %}
-		{% block css %} {% endblock %}
+		{% block head %} {% endblock %}
+		{% if not stylecss %}
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		{% endif %}
 	</head>
 	<body>
 		{{ content | safe }}
