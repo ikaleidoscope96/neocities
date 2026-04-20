@@ -1,6 +1,6 @@
 ---
 title: Test
-layout: base.njk
+layout: grid.njk
 ---
 
 # Test
