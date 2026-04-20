@@ -1,0 +1,26 @@
+{% extends "./base.njk" %}
+
+{% block body %}
+	<header>
+	<a href="/"><b>iKaleidoscope96</b></a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<a href="/">Home</a>
+		</nav>
+
+		<aside>
+			<h3>Explore The Site</h3>
+			<ul>
+				<li> <a href="/test/">test<a/> </li>
+				<li> <a href="/threejs/">threejs<a/> </li>
+				<li> <a href="/latex/">latex<a/> </li>
+			</ul>
+		</aside>
+
+		<main>
+		{{ super() }}
+		</main>
+	</div>
+{% endblock %}
