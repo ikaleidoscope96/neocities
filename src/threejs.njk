@@ -1,23 +1,36 @@
 ---
 title: Threejs
-layout: base.njk
+layout: grid.njk
 ---
 {% block head %}
 <style>
-	body { margin: 0; }
-	#info {
-		position: absolute;
-		top: 10px;
-		width: 100%;
-		text-align: center;
-		z-index: 100;
-		display: block;
-		color: white;
-	}
+.threejs-container {
+	display: flex;
+	justify-content: center;
+
+}
+.threejs {
+	aspect-ratio: 4/3;
+	width: 75%;
+	display: block;
+}
 </style>
 {% endblock %}
 
-<div id="info">The humble green cube.</div>
-<script type="module" src="../js/cube.js"></script>
-{# <div id="info">A simple cyan line.</div> #}
-{# <script type="module" src="../js/line.js"></script> #}
+<h1> {{ title }} </h1>
+
+<h2>The Humble Green Cube</h2>
+
+<div class="threejs-container">
+	<canvas class="threejs" id="cube"></canvas>
+	<script type="module" src="../js/cube.js"></script>
+</div>
+</br>
+
+<h2>A Simple Cyan Line</h2>
+
+<div class="threejs-container">
+	<canvas class="threejs" id="line"></canvas>
+	<script type="module" src="../js/line.js"></script>
+</div>
+</br>

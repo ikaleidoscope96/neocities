@@ -7,32 +7,68 @@
 		
 		
 		
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		
-		<script type="module" crossorigin src="/assets/index-BBeCKReS.js"></script>
-		<link rel="stylesheet" crossorigin href="/assets/style-CF8yU6MN.css">
 	</head>
 	<body>
 		
+	<header>
+	<a href="/"><b>iKaleidoscope96</b></a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<a href="/">Home</a>
+		</nav>
+
+		<aside>
+			<h3>Explore The Site</h3>
+			<ul>
+				<li> <a href="/test/">test<a/> </li>
+				<li> <a href="/threejs/">threejs<a/> </li>
+				<li> <a href="/latex/">latex<a/> </li>
+			</ul>
+		</aside>
+
+		<main>
+		
 			
 <style>
-	body { margin: 0; }
-	#info {
-		position: absolute;
-		top: 10px;
-		width: 100%;
-		text-align: center;
-		z-index: 100;
-		display: block;
-		color: white;
-	}
+.threejs-container {
+	display: flex;
+	justify-content: center;
+
+}
+.threejs {
+	aspect-ratio: 4/3;
+	width: 75%;
+	display: block;
+}
 </style>
 
 
-<div id="info">The humble green cube.</div>
+<h1> Threejs </h1>
 
+<h2>The Humble Green Cube</h2>
 
+<div class="threejs-container">
+	<canvas class="threejs" id="cube"></canvas>
+	<script type="module" src="../js/cube.js"></script>
+</div>
+</br>
+
+<h2>A Simple Cyan Line</h2>
+
+<div class="threejs-container">
+	<canvas class="threejs" id="line"></canvas>
+	<script type="module" src="../js/line.js"></script>
+</div>
+</br>
 
 		
+		</main>
+	</div>
+
 
 	</body>
 </html>
