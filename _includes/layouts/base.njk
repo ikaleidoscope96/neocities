@@ -9,7 +9,18 @@
 		{% endif %}
 		{% block head %}{% endblock %}
 		{% if not stylecss %}
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
+			<link rel="stylesheet" type="text/css" href="/css/style.css">
+		{% endif %}
+		{% if threejs %}
+			{% set version = "v0.183.2" %}
+			<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@{{ version }}/build/three.module.js",
+					"three/addons/": "https://cdn.jsdelivr.net/npm/three@version }}/examples/jsm/"
+				}
+			}
+			</script>
 		{% endif %}
 	</head>
 	<body>
