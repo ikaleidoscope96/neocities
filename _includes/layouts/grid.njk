@@ -1,26 +1,38 @@
 {% extends "./base.njk" %}
 
 {% block body %}
-	<header>
-	<a href="/"><b>iKaleidoscope96</b></a>
-	</header>
-
 	<div class="container">
-		<nav>
-			<a href="/">Home</a>
-		</nav>
+		<header>
+			<a href="/">
+				<img src="/images/kale.png" alt="Sparkling vegetable emoji" width=80px height=auto/>
+			</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/threejs/">Threejs</a>
+				<a href="/latex/">Latex</a>
+				<a href="/pokeapi/">Pokeapi</a>
+			</nav>
+		</header>
 
 		<aside>
 			<h3>Explore The Site</h3>
 			<ul>
-				<li> <a href="/test/">test<a/> </li>
-				<li> <a href="/threejs/">threejs<a/> </li>
-				<li> <a href="/latex/">latex<a/> </li>
+				<li> <a href="/latex/">latex</a> </li>
+				<li> <a href="/pokeapi/">pokeapi</a> </li>
+				<li> <a href="/test/">test</a> </li>
+				<li> <a href="/threejs/">threejs</a> </li>
 			</ul>
 		</aside>
 
 		<main>
-		{{ super() }}
+			{{ super() }}
 		</main>
+
+		<footer>
+			<a href="https://github.com/ikaleidoscope96/neocities">
+				<img alt="Static badge to github repo"
+				src="https://img.shields.io/badge/github-repo-green?logo=github">
+			</a>
+		</footer>
 	</div>
 {% endblock %}
