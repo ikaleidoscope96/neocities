@@ -5,4 +5,4 @@ layout: grid.njk
 
 # Test
 
-It feels good to test your limits!
+It feels good to test your limits -- not your patience.
