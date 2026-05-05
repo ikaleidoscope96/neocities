@@ -4,7 +4,7 @@
   "description": "my neocities website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/sass:src/css && eleventy"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.5"
   },
-  "scripts": {
-    "build": "eleventy"
+  "devDependencies": {
+    "sass": "^1.99.0"
   }
 }
