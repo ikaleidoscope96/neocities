@@ -8,11 +8,11 @@
 			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 		{% endif %}
 		{% block head %}{% endblock %}
-		{% if not stylecss %}
+		{% if not plain %}
 			<link rel="stylesheet" type="text/css" href="/css/style.css">
 		{% endif %}
 		{% if threejs %}
-			{% set version = "v0.183.2" %}
+			{% set version = "v0.184.0" %}
 			<script type="importmap">
 			{
 				"imports": {
@@ -29,4 +29,6 @@
 		{% endblock %}
 
 	</body>
+	{% block script %}
+	{% endblock %}
 </html>

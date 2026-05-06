@@ -34,8 +34,10 @@ header {
 	grid-area: header;
 
 	nav { justify-content: right; }
+	nav ul { display: inline-block; }
 }
 
+nav ul { list-style: none; }
 
 main {
 	padding: 10px;
@@ -50,6 +52,14 @@ aside {
 	background-color: #ccd0da;
 	border-radius: 10px;
 	grid-area: aside;
+	h2 {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	ul {
+		margin-top: 5px;
+		padding-left: 15px;
+	}
 }
 
 footer {
