@@ -9,7 +9,7 @@ headings.forEach(function (heading) {
 	const entry = document.createElement("li");
 	const link = document.createElement("a");
 	link.innerText = heading.innerText;
-	link.href = '#${id}';
+	link.href = `#${id}`;
 
 	entry.append(link);
 	entries.append(entry);
