@@ -4,7 +4,7 @@
   "description": "my neocities website",
   "main": "index.js",
   "scripts": {
-    "build": "sass src/sass:src/css && eleventy"
+    "build": "sass src/sass:src/css --no-source-map && eleventy"
   },
   "repository": {
     "type": "git",
