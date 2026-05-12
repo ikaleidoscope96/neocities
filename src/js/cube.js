@@ -8,7 +8,7 @@ const renderer = new THREE.WebGLRenderer({antialias: true, canvas});
 
 const needResize = canvas.width !== canvas.clientWidth || canvas.height !== canvas.clientHeight;
 if (needResize) {
-	renderer.setSize( canvas.clientWidth, canvas.clientHeight, false );
+  renderer.setSize( canvas.clientWidth, canvas.clientHeight, false );
 }
 renderer.setAnimationLoop( animate );
 
@@ -18,7 +18,7 @@ const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 function animate( time ) {
-	cube.rotation.x = time / 2000;
-	cube.rotation.y = time / 1000;
-	renderer.render( scene, camera );
+  cube.rotation.x = time / 2000;
+  cube.rotation.y = time / 1000;
+  renderer.render( scene, camera );
 }

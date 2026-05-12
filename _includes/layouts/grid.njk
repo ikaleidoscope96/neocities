@@ -1,40 +1,47 @@
 {% extends "./base.njk" %}
 
 {% block body %}
-	<div class="container">
-		<header>
-			<a href="/">
-				<img src="/images/kale.png" alt="Sparkling vegetable emoji" width=60px height=auto/>
-			</a>
-			<nav>
-				<a href="/">Home</a>
-				<a href="/threejs/">Threejs</a>
-				<a href="/latex/">Latex</a>
-				<a href="/pokeapi/">Pokeapi</a>
-			</nav>
-		</header>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="/images/kale.png" alt="Sparkling vegetable emoji" width=60px height=auto/>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/threejs/">Threejs</a>
+        <a href="/latex/">Latex</a>
+      </nav>
+    </header>
 
-		<aside class="table-of-contents">
-			<h2>Contents</h2>
-			<nav class="table-of-contents">
-				<ul class="table-of-contents">
-				</ul>
-			</nav>
-		</aside>
+    <aside class="table-of-contents">
+      <h2>Contents</h2>
+      <nav>
+        <ul class="table-of-contents">
+        </ul>
+      </nav>
+    </aside>
 
-		<main>
-			{{ super() }}
-		</main>
+    <main>
+      {{ super() }}
+    </main>
 
-		<footer>
-			<a href="https://github.com/ikaleidoscope96/neocities">
-				<img alt="Static badge to github repo"
-				src="https://img.shields.io/badge/github-repo-green?logo=github">
-			</a>
-		</footer>
-	</div>
+    <footer>
+      <label for="theme-select">Theme:</label>
+      <select name="themes" id="theme-select">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <a href="https://github.com/ikaleidoscope96/neocities">
+        <img alt="Static badge to github repo"
+        src="https://img.shields.io/badge/github-repo-green?logo=github">
+      </a>
+    </footer>
+  </div>
+  {% block js %}
+    <script src="/js/table-of-contents.js"></script>
+    <script src="/js/theme.js"></script>
+  {% endblock %}
 {% endblock %}
 
-{% block script %}
-	<script src="/js/contents.js"></script>
-{% endblock %}
