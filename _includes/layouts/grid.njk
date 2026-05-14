@@ -1,5 +1,8 @@
 {% extends "./base.njk" %}
-
+{% block head %}
+  <script src="/js/theme-init.js"></script>
+  <script src="/js/theme.js" type="module"></script>
+{% endblock %}
 {% block body %}
   <div class="container">
     <header>
@@ -41,7 +44,6 @@
   </div>
   {% block js %}
     <script src="/js/table-of-contents.js"></script>
-    <script src="/js/theme.js"></script>
   {% endblock %}
 {% endblock %}
 

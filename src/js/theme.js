@@ -1,27 +1,29 @@
-const select = document.querySelector("#theme-select");
 const prefersDarkmode = window.matchMedia("(prefers-color-scheme: dark)");
 
 function applyTheme(option) {
-  const root = document.documentElement;
+  const data = document.documentElement.dataset;
   if (option === "system") {
-    root.dataset.theme = prefersDarkmode.matches ? "dark" : "light";
+    data.theme = prefersDarkmode.matches ? "dark" : "light";
   } else {
-    root.dataset.theme = option;
+    data.theme = option;
   }
 
-  localStorage.setItem("theme", option);
+  localStorage.setItem("theme", data.theme);
 }
 
-const saved = localStorage.getItem("theme") ?? "system";
-select.value = saved;
-applyTheme(saved);
+document.addEventListener("DOMContentLoaded", ()=> {
+  const select = document.querySelector("#theme-select");
+  if (!select) return;
 
-select.addEventListener("change", (e) => {
-  applyTheme(e.target.value);
-});
+  select.value = localStorage.getItem("theme") ?? "system";
 
-prefersDarkmode.addEventListener("change", () => {
-  if ((localStorage.getItem("theme") ?? "system") === "system") {
-    applyTheme("system");
-  }
+  select.addEventListener("change", (e) => {
+    applyTheme(e.target.value);
+  });
+
+  prefersDarkmode.addEventListener("change", () => {
+    if ((localStorage.getItem("theme") ?? "system") === "system") {
+      applyTheme("system");
+    }
+  });
 });
