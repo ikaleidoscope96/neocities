@@ -1,10 +1,12 @@
 {% extends "./base.njk" %}
+
 {% block head %}
-  <script src="/js/theme-init.js"></script>
-  <script src="/js/theme.js" type="module"></script>
+  <script src="/js/init-theme.js"></script>
+  <script type="module" src="/js/table-of-contents.js"></script>
+  <script type="module" src="/js/switch-theme.js"></script>
 {% endblock %}
+
 {% block body %}
-  <div class="container">
     <header>
       <a href="/">
         <img src="/images/kale.png" alt="Sparkling vegetable emoji" width=60px height=auto/>
@@ -16,17 +18,20 @@
       </nav>
     </header>
 
-    <aside class="table-of-contents">
-      <h2>Contents</h2>
-      <nav>
-        <ul class="table-of-contents">
-        </ul>
-      </nav>
-    </aside>
+  <div class="flex-wrapper">
+    <div class="main-container">
+      <aside class="table-of-contents">
+        <h2>Contents</h2>
+        <nav>
+          <ul class="table-of-contents">
+          </ul>
+        </nav>
+      </aside>
 
-    <main>
-      {{ super() }}
-    </main>
+      <main>
+        {{ super() }}
+      </main>
+    </div>
 
     <footer>
       <label for="theme-select">Theme:</label>
@@ -42,8 +47,5 @@
       </a>
     </footer>
   </div>
-  {% block js %}
-    <script src="/js/table-of-contents.js"></script>
-  {% endblock %}
 {% endblock %}
 
